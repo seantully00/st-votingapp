@@ -50,11 +50,11 @@ module.exports = function (app, passport) {
 			failureRedirect: '/login'
 		}));
 		
-	app.get('/auth/twitter',
-		passport.authenticate('twitter'));
+	app.route('/auth/twitter')
+		.get(passport.authenticate('twitter'));
 
-	app.get('/auth/twitter/callback', 
-		passport.authenticate('twitter', { failureRedirect: '/login' }),
+	app.route('/auth/twitter/callback')
+		.get(passport.authenticate('twitter', { failureRedirect: '/login' }),
 			function(req, res) {
     		// Successful authentication, redirect home.
     		res.redirect('/');
