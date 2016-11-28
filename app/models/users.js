@@ -12,10 +12,10 @@ var User = new Schema({
 	},
    nbrClicks: {
       clicks: Number
-   }
+   },
    twitter: {
        
-   }
+   },
    polls: {
        
    }
