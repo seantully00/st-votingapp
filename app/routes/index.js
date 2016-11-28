@@ -49,6 +49,16 @@ module.exports = function (app, passport) {
 			successRedirect: '/',
 			failureRedirect: '/login'
 		}));
+		
+	app.get('/auth/twitter',
+		passport.authenticate('twitter'));
+
+	app.get('/auth/twitter/callback', 
+		passport.authenticate('twitter', { failureRedirect: '/login' }),
+			function(req, res) {
+    		// Successful authentication, redirect home.
+    		res.redirect('/');
+  });	
 
 	app.route('/api/:id/clicks')
 		.get(isLoggedIn, clickHandler.getClicks)

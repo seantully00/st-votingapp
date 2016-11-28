@@ -13,6 +13,12 @@ var User = new Schema({
    nbrClicks: {
       clicks: Number
    }
+   twitter: {
+       
+   }
+   polls: {
+       
+   }
 });
 
 module.exports = mongoose.model('User', User);
