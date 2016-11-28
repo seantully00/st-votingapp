@@ -47,6 +47,7 @@ module.exports = function (passport) {
 				}
 			});
 		});
+	},
 
 	passport.use(new GitHubStrategy({
 		clientID: configAuth.githubAuth.clientID,
@@ -82,5 +83,4 @@ module.exports = function (passport) {
 			});
 		});
 	}));
-});
 };
