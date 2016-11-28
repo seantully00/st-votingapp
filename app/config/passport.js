@@ -17,9 +17,9 @@ module.exports = function (passport) {
 	});
 	
 	passport.use(new TwitterStrategy({
-    consumerKey: TWITTER_CONSUMER_KEY,
-    consumerSecret: TWITTER_CONSUMER_SECRET,
-    callbackURL: APP_URL + '/auth/twitter/callback'
+    consumerKey: configAuth.twitterAuth.consumerKey,
+    consumerSecret: configAuth.twitterAuth.consumerSecret,
+    callbackURL: configAuth.twitterAuth.callbackURL
   },
   function(token, tokenSecret, profile, cb) {
     User.findOrCreate({ twitterId: profile.id }, function (err, user) {
