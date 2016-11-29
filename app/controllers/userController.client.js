@@ -29,9 +29,9 @@
          updateHtmlElement(userObject, profileUsername, 'twitter.screen_name');   
       }
 
-      //if (profileRepos !== null) {
-        // updateHtmlElement(userObject, profileRepos, 'publicRepos');   
-      //}
+      if (profileRepos !== null) {
+         updateHtmlElement(userObject, profileRepos, 'publicRepos');   
+      }
 
    }));
 })();
