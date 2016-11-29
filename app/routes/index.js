@@ -24,6 +24,12 @@ module.exports = function (app, passport) {
 		.get(function (req, res) {
 			res.sendFile(path + '/public/login.html');
 		});
+		
+	app.route('/createpoll')
+		.get(function (req, res) {
+			res.sendFile(path + '/public/createpoll.html');
+		});
+		
 
 	app.route('/logout')
 		.get(function (req, res) {
