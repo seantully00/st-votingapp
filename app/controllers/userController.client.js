@@ -16,17 +16,17 @@
       var userObject = JSON.parse(data);
 
       if (userObject.displayName !== null) {
-         updateHtmlElement(userObject, displayName, 'twitter.name');
+         updateHtmlElement(userObject, displayName, twitter.name);
       } else {
-         updateHtmlElement(userObject, displayName, 'twitter.screen_name');
+         updateHtmlElement(userObject, displayName, twitter.screen_name);
       }
 
       if (profileId !== null) {
-         updateHtmlElement(userObject, profileId, 'twitter.id');   
+         updateHtmlElement(userObject, profileId, twitter.id);   
       }
 
       if (profileUsername !== null) {
-         updateHtmlElement(userObject, profileUsername, 'twitter.screen_name');   
+         updateHtmlElement(userObject, profileUsername, twitter.screen_name);   
       }
 
       if (profileRepos !== null) {
