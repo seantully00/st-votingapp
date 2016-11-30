@@ -17,10 +17,14 @@ var User = new Schema({
        id: String,
        name: String,
        screen_name: String
-   },
-   polls: {
-       
    }
+});
+
+var Poll = new Schema({
+   title: String,
+   owner: String,
+   question: String,
+   choices: [{choice1: String, choice2: String, choice3: String, choice4: String, choice5: String}]
 });
 
 module.exports = mongoose.model('User', User);
