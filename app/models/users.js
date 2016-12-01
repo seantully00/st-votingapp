@@ -20,7 +20,7 @@ var User = new Schema({
    }
 });
 
-var PollChoiceSchema = new Schema({
+/*var PollChoiceSchema = new Schema({
    choice: String,
    votes: Number
 })
@@ -31,7 +31,7 @@ var Poll = new Schema({
    owner: String,
    question: String,
    choices: [PollChoiceSchema]
-});
+});*/
 
 module.exports = mongoose.model('User', User);
 module.exports = mongoose.model('Poll', Poll);
