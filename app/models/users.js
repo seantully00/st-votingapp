@@ -34,4 +34,4 @@ var Poll = new Schema({
 });*/
 
 module.exports = mongoose.model('User', User);
-module.exports = mongoose.model('Poll', Poll);
+//module.exports = mongoose.model('Poll', Poll);
