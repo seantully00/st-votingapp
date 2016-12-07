@@ -20,20 +20,20 @@
 			<div class="createpoll">
 		    <form>
                 Title:<br>
-                <input type="text" name="title"><br>
+                <input type="text" id="title"><br>
                 Question:<br>
-                <input type="text" name="question"><br>
+                <input type="text" id="question"><br>
                 Choice 1:<br>
-                <input type="text" name="choice1"><br>
+                <input type="text" id="choice1"><br>
                 Choice 2:<br>
-                <input type="text" name="choice2"><br>
+                <input type="text" id="choice2"><br>
             </form>
 		</div>
 		</div>
 		
 		<div class="container">
 			<div class="btn-container">
-				<button type="button" href="/">Add Choice</button>
+				<button type="button" class="btn-add" onclick="addChoice()"></a>>Add Choice</button>
 			</div>
 		</div>		
 	
@@ -44,7 +44,7 @@
 		</div>
 		
 		<script type="text/javascript" src="common/ajax-functions.js"></script>
-		<script type="text/javascript" src="controllers/userController.client.js"></script>
+		<script type="text/javascript" src="controllers/createpollController.client.js"></script>
 	</body>
 
 </html>
