@@ -2,6 +2,15 @@
 
 var choiceId = 2; // used by the addChoice() function to keep track of IDs
 
+function addElement(parentId, elementTag, elementId, html) {
+    // Adds an element to the document
+    var p = document.getElementById(parentId);
+    var newElement = document.createElement(elementTag);
+    newElement.setAttribute('id', elementId);
+    newElement.innerHTML = html;
+    p.appendChild(newElement);
+}
+
 function addChoice() {
     choiceId++; // increment fileId to get a unique ID for the new element
     var html = '<input type="text" onclick="javascript:removeElement(choice' + choiceId + '); return false;">Remove</input>';
