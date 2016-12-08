@@ -15,6 +15,7 @@ function removeElement(elementId) {
     // Removes an element from the document
     console.log(elementId);
     var element = document.getElementById(elementId);
+    console.log(element);
     element.removeChild(element);
 }
 
