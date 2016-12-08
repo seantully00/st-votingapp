@@ -11,9 +11,15 @@ function addElement(parentId, elementTag, elementId, html) {
     p.appendChild(newElement);
 }
 
+function removeElement(elementId) {
+    // Removes an element from the document
+    var element = document.getElementById(elementId);
+    element.parentNode.removeChild(element);
+}
+
 function addChoice() {
     choiceId++; // increment fileId to get a unique ID for the new element
-    var html = '<input type="text" onclick="javascript:removeElement(choice' + choiceId + '); return false;">Remove</input>';
+    var html = '<input type="text" id = "choice"' + choiceId + '> <button type = "button" onclick="javascript:removeElement(choice' + choiceId + '); return false;">Remove</button>';
     addElement("createpoll", 'button', 'choice' + choiceId, html);
 };
 
