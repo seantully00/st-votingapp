@@ -14,7 +14,7 @@ function addElement(parentId, elementTag, elementId, html) {
 function removeElement(elementId) {
     // Removes an element from the document
     console.log(elementId);
-    var createpoll = document.getElementById(createpoll);
+    var createpoll = document.getElementById("createpoll");
     //var element = document.getElementById(elementId);
     createpoll.removeChild(elementId);
 }
