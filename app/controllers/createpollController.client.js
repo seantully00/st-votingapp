@@ -13,6 +13,7 @@ function addElement(parentId, elementTag, elementId, html) {
 
 function removeElement(elementId) {
     // Removes an element from the document
+    console.log(elementId);
     var element = document.getElementById(elementId);
     element.removeChild(element);
 }
