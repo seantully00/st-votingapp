@@ -20,7 +20,7 @@ function removeElement(elementId) {
 function addChoice() {
     choiceId++; // increment fileId to get a unique ID for the new element
     var html = 'Choice ' + choiceId + ':<br><input type="text" id="choice' + choiceId + '"><br><button type = "button" onclick="removeElement(choice' + choiceId + ');">Remove</button>';
-    addElement('createpoll', 'input', 'choice' + choiceId, html);
+    addElement('createpoll', 'b', 'choice' + choiceId, html);
 };
 
 
